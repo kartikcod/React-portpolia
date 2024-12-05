@@ -3,6 +3,8 @@ import Navbar from './Navbar'
 import Contact from './Contact'
 import Hero from './Hero'
 import Skill from './Skill'
+import Footer from './Footer'
+
 
 
 
@@ -11,8 +13,7 @@ const Home = () => {
     <div>
      <Navbar/>
      <Hero/>
-     
-     
+   
     </div>
   )
 }

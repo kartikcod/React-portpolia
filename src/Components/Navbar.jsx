@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <>
-    <div className="flex items-center justify-center   p-5">
+    <div className="flex items-center justify-center p-5">
       <div className="text-center bg-white w-96 flex items-center bg-red justify-center p-5 rounded-lg">
         <div className="flex items-center content-center gap-5  bg-white text-black">
           <Link to="/Home" className="bg-white text-lg font-medium hover:animate-pulse" >Home</Link>
