@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
 
 const Contact = () => {
   const [result, setResult] = React.useState("");
@@ -14,14 +14,14 @@ const Contact = () => {
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
-      body: formData
+      body: formData,
     });
 
     const data = await response.json();
 
     if (data.success) {
-      Swal.fire("SweetAlert2 is working!");
-      // event.target.reset();
+      alert("Congratulation! Successfully Submit");
+      event.target.reset();
     }
     // } else {
     //   console.log("Error", data);
@@ -96,9 +96,7 @@ const Contact = () => {
             Send message
           </button>
         </form>
-      <span>{result}</span>
-         
-        
+        <span>{result}</span>
       </section>
     </>
   );
