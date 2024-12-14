@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
-import Swal from "sweetalert2";
+import Footer from "./Footer";
+import { motion } from "motion/react";
 
 const Contact = () => {
   const [result, setResult] = React.useState("");
@@ -33,7 +34,7 @@ const Contact = () => {
       <Navbar />
       <section ClassName="bg-gray-900">
         <div className="text-center ">
-          <h2 className=" text-white text-3xl">Contact Us</h2>
+          <h2 className=" text-cyan-400 font-bold text-3xl">Contact Us</h2>
           <p className="text-slate-400 p-3">
             We're here to help—contact us anytime!
           </p>
@@ -45,7 +46,7 @@ const Contact = () => {
           <div>
             <label
               forhtml="email"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              class="block mb-2 text-sm font-medium text-gray-300"
             >
               Your email
             </label>
@@ -61,7 +62,7 @@ const Contact = () => {
           <div>
             <label
               forhtml="subject"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              class="block mb-2 text-sm font-medium text-gray-300"
             >
               Subject
             </label>
@@ -77,7 +78,7 @@ const Contact = () => {
           <div class="sm:col-span-2">
             <label
               for="message"
-              className="block mb-2 text-sm font-medium text-white"
+              className="block mb-2 text-sm font-medium text-gray-300"
             >
               Your message
             </label>
@@ -89,15 +90,17 @@ const Contact = () => {
               placeholder="Leave a comment..."
             ></textarea>
           </div>
-          <button
+          <motion.button
+          whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}
             type="submit"
-            className="py-3 px-5 text-sm font-medium text-center bg-blue-500 text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+            className="py-3 px-5 text-sm font-medium text-center bg-blue-600 text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
           >
             Send message
-          </button>
+          </motion.button>
         </form>
         <span>{result}</span>
       </section>
+      <Footer/>
     </>
   );
 };

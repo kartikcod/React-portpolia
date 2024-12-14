@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import { motion } from "motion/react"
+import Footer from "./Footer";
 
 const Skill = () => {
   const skill = [
@@ -38,7 +39,7 @@ const Skill = () => {
       <div className=" py-12">
       <div className="container mx-auto px-6 text-center">
         <motion.h2
-          className="text-3xl font-bold text-cyan-100 mb-6"
+          className="text-3xl font-bold text-cyan-400 mb-6"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -73,6 +74,7 @@ const Skill = () => {
         </motion.div>
       </div>
     </div>
+    <Footer/>
     </>
   );
 };
