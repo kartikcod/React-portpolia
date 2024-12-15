@@ -34,64 +34,83 @@ const Contact = () => {
       <Navbar />
       <section ClassName="bg-gray-900">
         <div className="text-center ">
-          <h2 className=" text-cyan-400 font-bold text-3xl">Contact Us</h2>
-          <p className="text-slate-400 p-3">
+          <motion.h2
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+            className=" text-cyan-400 font-bold text-3xl"
+          >
+            Contact Us
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-slate-400 p-3"
+          >
             We're here to help—contact us anytime!
-          </p>
+          </motion.p>
         </div>
         <form
-          onSubmit={onSubmit}
-          className="space-y-5 flex justify-center items-center flex-col p-9"
+      onSubmit={onSubmit}
+      className="space-y-6 flex flex-col items-center p-6 sm:p-12"
+    >
+      {/* Email Input */}
+      <div className="w-full max-w-md">
+        <label
+          htmlFor="email"
+          className="block mb-2 text-sm font-medium text-gray-300"
         >
-          <div>
-            <label
-              forhtml="email"
-              class="block mb-2 text-sm font-medium text-gray-300"
-            >
-              Your email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-96 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-              placeholder="name@xyz.com"
-              required
-            />
-          </div>
-          <div>
-            <label
-              forhtml="subject"
-              class="block mb-2 text-sm font-medium text-gray-300"
-            >
-              Subject
-            </label>
-            <input
-              type="subject"
-              id="email"
-              name="subject"
-              class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 max-w-xl text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-96 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-              placeholder="Your Subject"
-              required
-            />
-          </div>
-          <div class="sm:col-span-2">
-            <label
-              for="message"
-              className="block mb-2 text-sm font-medium text-gray-300"
-            >
-              Your message
-            </label>
-            <textarea
-              id="message"
-              rows="6"
-              name="message"
-              className="block p-2.5 w-96 text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-              placeholder="Leave a comment..."
-            ></textarea>
-          </div>
+          Your Email
+        </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          className="w-full p-2.5 bg-gray-50 text-gray-900 text-sm rounded-lg shadow-sm border border-gray-300 focus:ring-cyan-500 focus:border-cyan-500 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:border-gray-600"
+          placeholder="kartik@xyz.com"
+          required
+        />
+      </div>
+
+      {/* Subject Input */}
+      <div className="w-full max-w-md">
+        <label
+          htmlFor="subject"
+          className="block mb-2 text-sm font-medium text-gray-300"
+        >
+          Subject
+        </label>
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          className="w-full p-2.5 bg-gray-50 text-gray-900 text-sm rounded-lg shadow-sm border border-gray-300 focus:ring-cyan-500 focus:border-cyan-500 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:border-gray-600"
+          placeholder="Your Subject"
+          required
+        />
+      </div>
+
+      {/* Message Textarea */}
+      <div className="w-full max-w-md">
+        <label
+          htmlFor="message"
+          className="block mb-2 text-sm font-medium text-gray-300"
+        >
+          Your Message
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          rows="6"
+          className="w-full p-2.5 bg-gray-50 text-gray-900 text-sm rounded-lg shadow-sm border border-gray-300 focus:ring-cyan-500 focus:border-cyan-500 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:border-gray-600"
+          placeholder="Leave a comment..."
+          required
+        ></textarea>
+      </div>
           <motion.button
-          whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
             type="submit"
             className="py-3 px-5 text-sm font-medium text-center bg-blue-600 text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
           >
@@ -100,7 +119,7 @@ const Contact = () => {
         </form>
         <span>{result}</span>
       </section>
-      <Footer/>
+      <Footer />
     </>
   );
 };

@@ -5,7 +5,6 @@ import Contact from "./Components/Contact";
 import "./App.css";
 import Skill from "./Components/Skill";
 import Footer from "./Components/Footer";
-import AnimatedCursor from "react-animated-cursor";
 const App = () => {
   return (
     <>
