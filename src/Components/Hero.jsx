@@ -9,21 +9,22 @@ const Hero = () => {
     <>
       <div className="flex flex-col-reverse sm:flex-row items-center justify-center sm:-mt-40 p-6 sm:p-12 gap-10">
         {/* Text Section */}
+        <div className="blur-3xl bg-cyan-400 w-52 left-44 animate-pulse absolute h-52 opacity-40"></div>
         <motion.div
           className="text-center sm:text-left sm:w-1/2 font-3xl mt-10 sm:mt-0"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <p className="text-cyan-50 text-xl sm:text-3xl tracking-wide">
+          <p className="text-cyan-50 text-xl sm:text-3xl tracking-wide pt-44">
             <span className="text-4xl sm:text-5xl font-semibold tracking-wide text-cyan-400 leading-tight">
               Hello, <br /> I'm Kartik
             </span>
             <br />
-            And I am a
-             <span className="hover:underline hover:text-cyan-400 transition-all ease-in-out">
+            And I'm
+            <span className="hover:underline hover:#000000 transition-all ease-in-out">
               <Typewriter
-                words={[ " Frontend Developer", " Thumbnail Designer"]}
+                words={[" Frontend Developer", " Thumbnail Designer"]}
                 loop={true}
                 cursor
                 cursorStyle="|"
@@ -34,11 +35,8 @@ const Hero = () => {
             </span>
           </p>
           <p className="text-white mt-6 text-base sm:text-lg italic tracking-wide font-sans">
-            Frontend developer skilled in
-            <span className="hover:bg-cyan-400 hover:text-black hover:rounded hover:transition-all hover:ease-in-out hover:font-bold pl-2">
-              React,Tailwind CSS, and Material UI
-            </span>
-            , creating responsive and visually appealing web interfaces.
+            Frontend developer skilled in React,Tailwind CSS, and Material UI ,
+            creating responsive and visually appealing web interfaces.
             Passionate about delivering high-quality, engaging user experiences.
           </p>
         </motion.div>

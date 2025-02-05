@@ -16,6 +16,7 @@ const Skill = () => {
     "Material UI",
     "Canva",
     "Pixellab",
+    "Framer Motion"
   ];
   const containerVariants = {
     hidden: { opacity: 0, scale: 0.8 },

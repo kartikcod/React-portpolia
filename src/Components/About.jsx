@@ -38,6 +38,7 @@ const About = () => {
           >
             Transforming Ideas into Interactive Digital Experiences
           </motion.p>
+          <div className="blur-3xl bg-cyan-400 w-52 left-72 absolute h-52 opacity-30"></div>
           <motion.span
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
