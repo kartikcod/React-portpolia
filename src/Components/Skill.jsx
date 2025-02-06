@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import { motion } from "motion/react"
 import Footer from "./Footer";
+import AnimatedCursor from "react-animated-cursor";
 
 const Skill = () => {
   const skill = [
@@ -76,6 +77,7 @@ const Skill = () => {
       </div>
     </div>
     <Footer/>
+    <AnimatedCursor/>
     </>
   );
 };

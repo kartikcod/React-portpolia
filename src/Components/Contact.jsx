@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { motion } from "motion/react";
+import AnimatedCursor from "react-animated-cursor";
 
 const Contact = () => {
   const [result, setResult] = React.useState("");
@@ -119,6 +120,7 @@ const Contact = () => {
         </form>
         <span>{result}</span>
       </section>
+      <AnimatedCursor />
       <Footer />
     </>
   );

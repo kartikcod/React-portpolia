@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { motion } from "motion/react";
+import AnimatedCursor from "react-animated-cursor";
 
 const About = () => {
   const ScrollAnimation = {
@@ -66,6 +67,7 @@ const About = () => {
           </motion.button>
         </div>
         <Footer />
+        <AnimatedCursor />
       </div>
     </>
   );

@@ -3,7 +3,7 @@ import image from "e:/React project/kartik/src/Assets/Image.png";
 import Footer from "./Footer";
 import { motion } from "motion/react";
 import { Typewriter } from "react-simple-typewriter";
-
+import AnimatedCursor from "react-animated-cursor";
 const Hero = () => {
   return (
     <>
@@ -55,8 +55,10 @@ const Hero = () => {
           />
         </motion.div>
       </div>
+    
 
       <Footer />
+      <AnimatedCursor/>
     </>
   );
 };
